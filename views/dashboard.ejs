@@ -1,0 +1,60 @@
+<%- include ('partials/header'); %>
+<div class="root">
+
+    <div class="top-area bg-blue-700 flex h-20">
+        <div class="nav-brand w-80 flex justify-center items-center">
+            <h1 class="font-bold text-white">
+                <span class="block text-2xl text-center">Books</span>
+                <span class="block text-xl text-center"> Library System</span>
+<!--                <span class="block"> System </span>-->
+            </h1>
+        </div>
+
+        <div class="nav-body flex justify-between text-white w-full px-4 items-center">
+            <h1 text-3xl>DASHBOARD</h1>
+            <div class="flex justify-center items-center gap-4">
+                <a href="/new-book" class="text-2xl bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white hover:cursor-pointer">NEW</a>
+                <h3>Total: <span class="text-bold">0</span> </h3>
+                <h3>Total: <span class="text-bold">0</span> </h3>
+            </div>
+
+        </div>
+    </div>
+    <div class="book-area">
+
+
+        <div class="relative overflow-x-auto">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">ID</th>
+                    <th scope="col" class="px-6 py-3">Name</th>
+                    <th scope="col" class="px-6 py-3">Author</th>
+                    <th scope="col" class="px-6 py-3">Price</th>
+                    <th scope="col" class="px-6 py-3">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+                <% for (let i = 0; i < books.length; i++) { %>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple MacBook Pro 17"</th>
+                    <td class="px-6 py-4">Silver</td>
+                    <td class="px-6 py-4">Laptop</td>
+                    <td class="px-6 py-4">$2999</td>
+                    <td class="px-6 py-4 flex justify-between">
+                        <a class="bg-blue-500 px-4 py-2 text-white rounded hover:bg-blue-600" href="#">EDIT</a>
+                        <a class="bg-red-500 px-4 py-2 text-white rounded hover:bg-red-600" href="/delete?id=<%=books[i]._id%>">DELETE</a>
+                    </td>
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<%- include ('partials/footer'); %>

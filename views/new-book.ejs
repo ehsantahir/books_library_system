@@ -1,0 +1,48 @@
+<%- include ('partials/header'); %>
+<div class="root">
+
+    <div class="top-area bg-blue-700 flex h-20">
+        <div class="nav-brand w-80 flex justify-center items-center">
+            <a href="/" class="font-bold text-white hover:cursor-pointer">
+                <span class="block text-2xl text-center">Books</span>
+                <span class="block text-xl text-center"> Library System</span>
+                <!--                <span class="block"> System </span>-->
+            </a>
+        </div>
+
+        <div class="nav-body flex justify-between text-white w-full px-4 items-center">
+            <h1 text-3xl>CREATE NEW BOOK</h1>
+            <div class="flex justify-center items-center gap-4 ">
+
+
+
+            </div>
+            </div>
+
+    </div>
+    <div class="book-area bg-gray-500 ">
+
+            <form class="max-w-sm mx-auto h-full p-5" method="post" action="new-book">
+                <div class="mb-5">
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Book-Name</label>
+                    <input type="text" name="book_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="book-name" required />
+                </div>
+
+                <div class="mb-5">
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Book-Author</label>
+                    <input type="text" name="book_author"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="book-author" required />
+                </div>
+                <div class="mb-5">
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Book-Price</label>
+                    <input  type="number" name="book_price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="book-price" required />
+                </div>
+                <button href="/new-book" class="text-2xl bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white hover:cursor-pointer">create</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<%- include ('partials/footer'); %>
